@@ -4,25 +4,36 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Login Form</title>
-  <link rel="stylesheet" href="style.css">
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
 </head>
-<body>
-  <div class="login-container">
-    <h2>Silakan login terlebih dahulu</h2>
-    <form action="#" method="POST">
-      <label for="username">Nama pengguna:</label>
-      <input type="text" id="username" name="username" placeholder="Masukkan nama pengguna" required>
-
-      <label for="password">Kata sandi:</label>
-      <input type="password" id="password" name="password" placeholder="Masukkan kata sandi" required>
-
-      <label>
-        <input type="checkbox" name="remember"> Ingat saya
-      </label>
-      <button type="submit">Login</button>
-      <p><a href="#">Lupa kata sandi Anda?</a></p>
-      <p>Belum punya akun? <a href="#">Daftar sekarang</a>.</p>
-    </form>
+<body class="bg-cover bg-center" style="background-image: url('background.jpg');">
+  <div class="flex items-center justify-center min-h-screen">
+    <div class="bg-white bg-opacity-90 rounded-lg shadow-lg p-8 w-96">
+      <h2 class="text-2xl font-bold text-center text-gray-800">Silakan Login</h2>
+      <form action="#" method="POST" class="mt-4">
+        <div class="mb-4">
+          <label for="username" class="block text-gray-700">Nama Pengguna:</label>
+          <input type="text" id="username" name="username" placeholder="Masukkan nama pengguna" required class="mt-1 block w-full p-2 border border-gray-300 rounded-md focus:outline-none focus:ring focus:ring-blue-500">
+        </div>
+        <div class="mb-4">
+          <label for="password" class="block text-gray-700">Kata Sandi:</label>
+          <input type="password" id="password" name="password" placeholder="Masukkan kata sandi" required class="mt-1 block w-full p-2 border border-gray-300 rounded-md focus:outline-none focus:ring focus:ring-blue-500">
+        </div>
+        <div class="mb-4">
+          <label class="inline-flex items-center">
+            <input type="checkbox" name="remember" class="form-checkbox text-blue-600">
+            <span class="ml-2 text-gray-700">Ingat saya</span>
+          </label>
+        </div>
+        <button type="submit" class="w-full bg-blue-600 text-white py-2 rounded-md hover:bg-blue-700 transition duration-200">Login</button>
+        <p class="mt-4 text-center">
+          <a href="#" class="text-blue-600 hover:underline">Lupa kata sandi?</a>
+        </p>
+        <p class="mt-2 text-center">
+          Belum punya akun? <a href="#" class="text-blue-600 hover:underline">Daftar sekarang</a>.
+        </p>
+      </form>
+    </div>
   </div>
 </body>
 </html>
